@@ -77,8 +77,7 @@ namespace {
   }
 }
 
-DisplayApp::DisplayApp(Drivers::St7789& lcd,
-                       Components::LittleVgl& lvgl,
+DisplayApp::DisplayApp(Components::LittleVgl& lvgl,
                        Drivers::Cst816S& touchPanel,
                        Controllers::Battery& batteryController,
                        Controllers::Ble& bleController,
@@ -91,8 +90,7 @@ DisplayApp::DisplayApp(Drivers::St7789& lcd,
                        Pinetime::Controllers::MotionController& motionController,
                        Pinetime::Controllers::TimerController& timerController,
                        Pinetime::Controllers::TouchHandler& touchHandler)
-  : lcd {lcd},
-    lvgl {lvgl},
+  : lvgl {lvgl},
     touchPanel {touchPanel},
     batteryController {batteryController},
     bleController {bleController},
@@ -178,12 +176,10 @@ void DisplayApp::Refresh() {
           brightnessController.Lower();
           vTaskDelay(100);
         }
-        lcd.DisplayOff();
         PushMessageToSystemTask(Pinetime::System::Messages::OnDisplayTaskSleeping);
         state = States::Idle;
         break;
       case Messages::GoToRunning:
-        lcd.DisplayOn();
         brightnessController.Restore();
         state = States::Running;
         break;

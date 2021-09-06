@@ -126,8 +126,7 @@ Pinetime::Controllers::Settings settingsController {fs};
 Pinetime::Controllers::MotorController motorController {settingsController};
 
 
-Pinetime::Applications::DisplayApp displayApp(lcd,
-                                              lvgl,
+Pinetime::Applications::DisplayApp displayApp(lvgl,
                                               touchPanel,
                                               batteryController,
                                               bleController,
