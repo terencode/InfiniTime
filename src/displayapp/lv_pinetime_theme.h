@@ -18,9 +18,8 @@ extern "C" {
 /*********************
  *      DEFINES
  *********************/
-#define LV_IT_COLOR_BUTTON lv_color_hex(0x2f3540)
-#define LV_IT_COLOR_BUTTON_DISABLED lv_color_hex(0x080808)
-#define LV_IT_COLOR_ACCENT LV_COLOR_TEAL
+#define LV_IT_COLOR_BUTTON LV_COLOR_MAKE(0x2f, 0x35, 0x40)
+#define LV_IT_COLOR_BUTTON_DISABLED LV_COLOR_MAKE(0x08, 0x08, 0x08)
 
 /**********************
  *      TYPEDEFS
