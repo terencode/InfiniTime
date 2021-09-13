@@ -18,7 +18,6 @@ BatteryInfo::BatteryInfo(Pinetime::Applications::DisplayApp* app, Pinetime::Cont
   lv_obj_set_style_local_radius(charging_bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
   lv_obj_set_style_local_bg_color(charging_bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, lv_color_hex(0x222222));
   lv_obj_set_style_local_bg_opa(charging_bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, LV_OPA_100);
-  lv_obj_set_style_local_bg_color(charging_bar, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, lv_color_hex(0xFF0000));
   lv_bar_set_value(charging_bar, batteryPercent, LV_ANIM_ON);
 
   status = lv_label_create(lv_scr_act(), nullptr);
