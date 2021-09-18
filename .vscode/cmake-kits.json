@@ -1,0 +1,6 @@
+[
+    {
+    "name": "GCC 11.2.0 arm-none-eabi",
+    "toolchainFile" : "../cmake-nRF5x/arm-gcc-toolchain.cmake"
+  }
+]
