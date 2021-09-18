@@ -37,6 +37,15 @@
                 "settings":{
                     "USE_GDB_CLIENT":1
                 }
+            },
+            "None" :{
+                "short":"NoDebugTools",
+                "long": "Don't use any debugging tools",
+                "settings":{
+                    "USE_GDB_CLIENT":0,
+                    "USE_JLINK":0,
+                    "USE_OPENOCD":0
+                }
             }
         }
     },
